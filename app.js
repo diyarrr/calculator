@@ -157,6 +157,8 @@ equalsButton.addEventListener("click", function() {
         num1 = round(num1, 2);
         num2 = "";
         oper = "";
+        dotCounterNum1 = 0;
+        dotCounterNum2 = 0;
     }
 })
 
@@ -168,6 +170,8 @@ allClearButton.addEventListener("click", function() {
     num1 = "";
     num2 = "";
     oper = "";
+    dotCounterNum1 = 0;
+    dotCounterNum2 = 0;
 })
 
 // I found this round function at https://www.jacklmoore.com/notes/rounding-in-javascript/
@@ -182,6 +186,7 @@ window.addEventListener("keydown", function(e) {
         if(oper === "") {
             num1 = "";
             display.textContent = 0;
+            dotCounterNum1 = 0;
         }
         else if(num1 != "" && num2 === "" && oper != "") {
             oper = "";
@@ -190,7 +195,9 @@ window.addEventListener("keydown", function(e) {
         else {
             num2 = "";
             display.textContent = 0;
+            dotCounterNum2 = 0;
         }
     }
 })
+
 
